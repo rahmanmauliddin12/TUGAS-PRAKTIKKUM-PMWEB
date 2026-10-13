@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrerGo | Dashboard</title>
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard" data-auth="required">
+<div class="app">
+  <aside class="sidebar">
+    <a href="dashboard.html"><img class="logo" src="assets/logo-white.svg" alt="CarrerGo"></a>
+    <nav class="side-nav"><a href="dashboard.html" class="active"><i data-ic="home"></i>Dashboard</a><a href="lowongan/lowongan.html" class=""><i data-ic="briefcase"></i>Lowongan Kerja</a><a href="profile.html" class=""><i data-ic="user"></i>Profil</a></nav>
+  </aside>
+  <main class="main dash">
+    <div class="topbar">
+      <label class="searchbox"><i data-ic="search"></i><input id="topSearch" type="text" placeholder="Cari Lowongan, posisi, atau perusahaan"></label>
+      <div class="top-right">
+        <button class="bell" id="bellBtn" aria-label="Notifikasi"><i data-ic="bell"></i><span class="dot"></span></button>
+        <button class="user-chip" id="userChip"></button>
+      </div>
+      <div class="dropdown" id="menuNotif"></div><div class="dropdown" id="menuUser"></div>
+    </div>
+    <h2 class="page-title hello" id="hello">Halo!</h2>
+    <div class="stats">
+      <a class="stat" href="lowongan/lowongan.html"><i data-ic="briefcase"></i><span class="txt"><span class="num" id="nJobs">0</span><span class="lbl">Lowongan tersaring</span></span></a>
+      <a class="stat" id="statApps" href="lamaran/lamaran.html"><i data-ic="file"></i><span class="txt"><span class="num" id="nApps">0</span><span class="lbl">Lamaran Aktif</span></span></a>
+      <a class="stat" href="lowongan/lowongan.html?rek=1"><i data-ic="award"></i><span class="txt"><span class="num" id="nRek">0</span><span class="lbl">Rekomendasi</span></span></a>
+    </div>
+    <h2 class="section-title">Lowongan Baru</h2>
+    <div class="cards" id="newJobs"></div>
+    <h2 class="section-title">Kategori Pekerjaan</h2>
+    <div class="cats" id="cats"></div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

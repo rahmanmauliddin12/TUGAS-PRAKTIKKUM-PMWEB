@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrerGo | Profil</title>
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile" data-auth="required">
+<div class="app">
+  <aside class="sidebar">
+    <a href="dashboard.html"><img class="logo" src="assets/logo-white.svg" alt="CarrerGo"></a>
+    <nav class="side-nav"><a href="dashboard.html" class=""><i data-ic="home"></i>Dashboard</a><a href="lowongan/lowongan.html" class=""><i data-ic="briefcase"></i>Lowongan Kerja</a><a href="profile.html" class="active"><i data-ic="user"></i>Profil</a></nav>
+  </aside>
+  <main class="main profile">
+    <div class="topbar">
+      <label class="searchbox"><i data-ic="search"></i><input id="topSearch" type="text" placeholder="Cari Lowongan, posisi, atau perusahaan"></label>
+      <div class="top-right">
+        <button class="bell" id="bellBtn" aria-label="Notifikasi"><i data-ic="bell"></i><span class="dot"></span></button>
+        <button class="user-chip" id="userChip"></button>
+      </div>
+      <div class="dropdown" id="menuNotif"></div><div class="dropdown" id="menuUser"></div>
+    </div>
+    <section class="head-card">
+      <img class="avatar-lg" id="avBig" src="assets/avatar.png" alt="Foto profil">
+      <div class="head-info"><h2 id="pName"></h2><p id="pStatus"></p><p class="mail" id="pMail"></p></div>
+      <button class="btn btn-line btn-edit" id="btnEdit">Edit Profil</button>
+    </section>
+    <div class="grid">
+      <section class="card detail">
+        <div class="row">Nama Lengkap: <span id="dName" style="display:contents"></span></div>
+        <div class="row"><span>Email</span><span>: <span id="dMail"></span></span></div>
+        <div class="row"><span>No. HP</span><span>: <span id="dHp"></span></span></div>
+        <div class="row"><span>Alamat</span><span>: <span id="dAddr"></span></span></div>
+      </section>
+      <section class="card photo-card">
+        <h3>Foto Profil</h3>
+        <img id="avSmall" src="assets/avatar.png" alt="Foto profil">
+        <button class="btn btn-line" id="btnPhoto">Ubah Foto</button>
+        <input type="file" id="photoFile" accept="image/*" hidden>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
