@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrerGo | Daftar</title>
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth register-page" data-page="register">
+<div class="auth-page">
+  <div class="auth-left">
+    <div class="blob b-tl"></div><div class="blob b-bl"></div>
+    <a href="index.html"><img class="logo" src="assets/logo.svg" alt="CarrerGo"></a>
+    <div class="auth-form-wrap">
+      <h1>Buat Akun Baru</h1>
+      <p class="auth-sub">Mulai perjalanan kariermu sekarang!</p>
+      <form id="registerForm" novalidate>
+        <div class="field"><label for="nama">Nama Lengkap</label>
+          <div class="input-wrap"><i data-ic="usercircle"></i><input id="nama" type="text" placeholder="Masukkan Nama Lengkap"></div><p class="err" id="e-nama"></p></div>
+        <div class="field"><label for="email">Email</label>
+          <div class="input-wrap"><i data-ic="mail"></i><input id="email" type="email" placeholder="Masukkan Email"></div><p class="err" id="e-email"></p></div>
+        <div class="field"><label for="password">Password</label>
+          <div class="input-wrap"><i data-ic="lock"></i><input id="password" type="password" placeholder="Masukkan Password"><button type="button" class="eye" aria-label="Tampilkan password"><i data-ic="eye"></i></button></div><p class="err" id="e-password"></p></div>
+        <div class="field"><label for="confirm">Konfirmasi Password</label>
+          <div class="input-wrap"><i data-ic="lock"></i><input id="confirm" type="password" placeholder="Konfirmasi Password"><button type="button" class="eye" aria-label="Tampilkan password"><i data-ic="eye"></i></button></div><p class="err" id="e-confirm"></p></div>
+        <button type="submit" class="btn submit-btn">Daftar</button>
+      </form>
+      <p class="alt">Sudah punya akun? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+  <div class="auth-right">
+    <div class="blob dark b-r1"></div><div class="blob dark b-br"></div>
+    <img class="illu" src="assets/register-illustration.png" alt="">
+  </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

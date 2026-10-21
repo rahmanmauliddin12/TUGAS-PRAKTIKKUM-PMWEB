@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrerGo | Lowongan Kerja</title>
+<link rel="icon" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="jobs" data-auth="required">
+<div class="app">
+  <aside class="sidebar">
+    <a href="../dashboard.html"><img class="logo" src="../assets/logo-white.svg" alt="CarrerGo"></a>
+    <nav class="side-nav"><a href="../dashboard.html" class=""><i data-ic="home"></i>Dashboard</a><a href="lowongan.html" class="active"><i data-ic="briefcase"></i>Lowongan Kerja</a><a href="../profile.html" class=""><i data-ic="user"></i>Profil</a></nav>
+  </aside>
+  <main class="main jobs">
+    <div class="topbar">
+      <label class="searchbox"><i data-ic="search"></i><input id="topSearch" type="text" placeholder="Cari Lowongan, posisi, atau perusahaan"></label>
+      <div class="top-right">
+        <button class="bell" id="bellBtn" aria-label="Notifikasi"><i data-ic="bell"></i><span class="dot"></span></button>
+        <button class="user-chip" id="userChip"></button>
+      </div>
+      <div class="dropdown" id="menuNotif"></div><div class="dropdown" id="menuUser"></div>
+    </div>
+    <h2 class="page-title">Lowongan Kerja</h2>
+    <div class="search-row">
+      <label class="searchbox"><i data-ic="search"></i><input id="jobQ" type="text" placeholder="Cari Lowongan, posisi, atau perusahaan"></label>
+      <button class="btn btn-fill" id="btnCari">Cari</button>
+    </div>
+    <div class="filter-row">
+      <div class="sel"><select id="fLocation" aria-label="Lokasi"></select><i data-ic="chevron"></i></div>
+      <div class="sel"><select id="fCategory" aria-label="Kategori"></select><i data-ic="chevron"></i></div>
+      <div class="sel"><select id="fType" aria-label="Jenis"></select><i data-ic="chevron"></i></div>
+      <button class="btn btn-line btn-filter" id="btnFilter"><i data-ic="filter"></i>Filter</button>
+    </div>
+    <div class="section-head"><h2 class="section-title">Lowongan Terbaru</h2><button class="btn btn-fill btn-add" id="btnAdd">+ Tambah Lowongan</button></div>
+    <div class="cards" id="jobList"></div>
+
+  </main>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>
