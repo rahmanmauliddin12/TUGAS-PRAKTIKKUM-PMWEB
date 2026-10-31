@@ -1,0 +1,37 @@
+<?php
+$root = '../';
+require __DIR__ . '/../includes/auth.php';
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrerGo | Lamaran</title>
+<link rel="icon" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="lamaran" data-auth="required">
+<div class="app">
+  <aside class="sidebar">
+    <a href="../dashboard.php"><img class="logo" src="../assets/logo-white.svg" alt="CarrerGo"></a>
+    <nav class="side-nav"><a href="../dashboard.php" class="active"><i data-ic="home"></i>Dashboard</a><a href="../lowongan/lowongan.php" class=""><i data-ic="briefcase"></i>Lowongan Kerja</a><a href="../profile.php" class=""><i data-ic="user"></i>Profil</a></nav>
+  </aside>
+  <main class="main jobs">
+    <div class="topbar">
+      <label class="searchbox"><i data-ic="search"></i><input id="topSearch" type="text" placeholder="Cari Lowongan, posisi, atau perusahaan"></label>
+      <div class="top-right">
+        <button class="bell" id="bellBtn" aria-label="Notifikasi"><i data-ic="bell"></i><span class="dot"></span></button>
+        <button class="user-chip" id="userChip"></button>
+      </div>
+      <div class="dropdown" id="menuNotif"></div><div class="dropdown" id="menuUser"></div>
+    </div>
+    <h2 class="page-title">Lamaran Aktif</h2>
+    <div class="cards" id="appCards" style="margin-top:1rem"></div>
+  </main>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>
