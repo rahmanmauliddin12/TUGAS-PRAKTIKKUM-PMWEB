@@ -1,0 +1,45 @@
+<?php
+$root = '../';
+require __DIR__ . '/../includes/auth.php';
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrerGo | Form Lowongan</title>
+<link rel="icon" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="entry" data-auth="required">
+<div class="app">
+  <aside class="sidebar">
+    <a href="../dashboard.php"><img class="logo" src="../assets/logo-white.svg" alt="CarrerGo"></a>
+    <nav class="side-nav"><a href="../dashboard.php" class=""><i data-ic="home"></i>Dashboard</a><a href="lowongan.php" class="active"><i data-ic="briefcase"></i>Lowongan Kerja</a><a href="../profile.php" class=""><i data-ic="user"></i>Profil</a></nav>
+  </aside>
+  <main class="main jobs">
+    <div class="topbar">
+      <label class="searchbox"><i data-ic="search"></i><input id="topSearch" type="text" placeholder="Cari Lowongan, posisi, atau perusahaan"></label>
+      <div class="top-right">
+        <button class="bell" id="bellBtn" aria-label="Notifikasi"><i data-ic="bell"></i><span class="dot"></span></button>
+        <button class="user-chip" id="userChip"></button>
+      </div>
+      <div class="dropdown" id="menuNotif"></div><div class="dropdown" id="menuUser"></div>
+    </div>
+    <h2 class="page-title" id="entryTitle">Tambah Lowongan</h2>
+    <form class="entry-card" id="entryForm" action="lowongan-proses.php" method="post" enctype="multipart/form-data" novalidate>
+      <input type="hidden" name="id" id="eId">
+      <div class="m-field"><label for="eTitle">Posisi</label><input id="eTitle" name="posisi" type="text" placeholder="cth: Data Analyst"></div><div class="m-field"><label for="eComp">Perusahaan</label><input id="eComp" name="perusahaan" type="text" placeholder="cth: PT. Nusantara Digital"></div><div class="m-field"><label for="eLoc">Lokasi</label><input id="eLoc" name="lokasi" type="text" placeholder="cth: Jakarta"></div>
+      <div class="m-row"><div class="m-field"><label for="eMin">Gaji Minimum (Rp)</label><input id="eMin" name="gaji_min" type="number" placeholder="6000000"></div><div class="m-field"><label for="eMax">Gaji Maksimum (Rp)</label><input id="eMax" name="gaji_max" type="number" placeholder="8000000"></div></div>
+      <div class="m-row"><div class="m-field"><label for="eType">Jenis</label><select id="eType" name="jenis"></select></div><div class="m-field"><label for="eCat">Kategori</label><select id="eCat" name="kategori"></select></div></div>
+      <div class="m-field"><label for="eLogo">Logo Perusahaan (opsional)</label><input id="eLogo" type="file" name="photo" accept="image/*"></div>
+      <p class="form-msg" id="eMsg"></p>
+      <div class="m-actions"><a class="btn btn-grey" href="lowongan.php">Batal</a><button type="submit" class="btn btn-fill" name="simpan" value="1">Simpan</button></div>
+    </form>
+  </main>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>
